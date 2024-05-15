@@ -146,10 +146,10 @@ public class ProductController {
             description = "${api.product-info.description}"
     )
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "${api.response.getMenuInfoOk}"),
+            @ApiResponse(responseCode = "200", description = "${api.response.getProductInfoOk}"),
             @ApiResponse(
                     responseCode = "400",
-                    description = "${api.response.getMenuInfoBadRequest}",
+                    description = "${api.response.getProductInfoBadRequest}",
                     content = @Content(
                             schema = @Schema(implementation = ProblemDetail.class)
                     )
