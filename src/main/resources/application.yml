@@ -88,7 +88,7 @@ spring:
       label: master
 
 configserver:
-  import: optional:configserver:${CONFIG_SERVER_URL:http://localhost:9095}
+  import: optional:configserver:${CONFIG_SERVER_URL:http://localhost:8085}
 
 springdoc:
   api-docs:
