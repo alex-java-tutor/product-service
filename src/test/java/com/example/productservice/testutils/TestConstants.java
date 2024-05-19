@@ -36,4 +36,8 @@ public class TestConstants {
     public static final LocalDateTime PRODUCT_FOUR_DATE = LocalDateTime.of(2024, Month.MAY, 14, 10, 23, 54);
     public static final LocalDateTime PRODUCT_FIVE_DATE = LocalDateTime.of(2024, Month.MAY, 15, 10, 23, 54);
 
+    public static final String NEW_NAME = "New Name";
+    public static final String NEW_DESCR = "New Description";
+    public static final BigDecimal NEW_PRICE = BigDecimal.valueOf(99.99);
+
 }
