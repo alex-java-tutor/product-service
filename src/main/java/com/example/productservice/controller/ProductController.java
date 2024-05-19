@@ -90,6 +90,13 @@ public class ProductController {
                             schema = @Schema(implementation = ProblemDetail.class)
                     )
             ),
+            @ApiResponse(
+                    responseCode = "409",
+                    description = "${api.response.updateConflict}",
+                    content = @Content(
+                            schema = @Schema(implementation = ProblemDetail.class)
+                    )
+            )
     })
     @PatchMapping("/{id}")
     public ProductResponse updateProduct(@PathVariable("id") @Positive(message = "ID must be > 0.") Long id,
