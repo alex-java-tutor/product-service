@@ -7,6 +7,8 @@ printf "\n\nCreating Product Two\n\n"
 curl -X POST http://localhost:8081/v1/products -H 'Content-Type: application/json' -d '{"name": "Two", "description": "Description Two", "price": 2}'
 printf "\n\nCreating Product Three\n\n"
 curl -X POST http://localhost:8081/v1/products -H 'Content-Type: application/json' -d '{"name": "Three", "description": "Description Three", "price": 3}'
+printf "\n\nCreating Product With Invalid Name And Description\n\n"
+curl -X POST http://localhost:8081/v1/products -H 'Content-Type: application/json' -d '{"name": "   ", "description": "   ", "price": 3}'
 printf "\n\nDeleting Product One\n\n"
 curl -X DELETE http://localhost:8081/v1/products/1
 printf "\n\nGetting Product One After Delete\n\n"
