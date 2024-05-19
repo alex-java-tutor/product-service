@@ -4,3 +4,6 @@ spring:
     url: jdbc:tc:postgresql:16.1:///test_database
     username: user
     password: password
+eureka:
+  client:
+    enabled: false

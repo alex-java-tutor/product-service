@@ -87,8 +87,26 @@ spring:
         multiplier: 1.1
       label: master
 
+eureka:
+  client:
+    service-url:
+      defaultZone: ${external.service-discovery-url}
+    # Время отправки информации об инстансе в Eureka при первом подключении. По умолчанию
+    # 40 секунд. Снижаем в dev-среде, чтобы ускорить доступность инстанса.
+    initial-instance-info-replication-interval-seconds: 5
+  instance:
+    # Как часто посылать хартбиты в Eureka. По умолчанию 30 секунд.
+    lease-renewal-interval-in-seconds: 5
+    # Время ожидания с момента последнего получения хартбита сервером Eureka, перед тем
+    # как убрать инстанс из списка доступных для отправки запросов. По умолчанию 90 секунд.
+    lease-expiration-duration-in-seconds: 5
+    prefer-ip-address: true
+
 configserver:
   import: optional:configserver:${CONFIG_SERVER_URL:http://localhost:8085}
+
+external:
+  service-discovery-url: http://localhost:8761/eureka/
 
 springdoc:
   api-docs:
