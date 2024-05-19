@@ -3,7 +3,6 @@ package com.example.productservice.storage.repositories;
 import com.example.productservice.BaseTest;
 import com.example.productservice.storage.model.Product;
 import com.example.productservice.storage.repositories.updaters.ProductUpdatersConfig;
-import com.example.productservice.testutils.TestDataProvider;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
